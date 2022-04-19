@@ -1,22 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react'
+import ReactDom from "react-dom/client";
+import Testcompo from './Testcompo.js';
+
+const empl = [
+  { id: 1, name: 'Alex', genre: 'Masculin', typeContrat: 'cdd' },
+  { id: 2, name: 'Alex', genre: 'Masculin', typeContrat: 'cd1' },
+  { id: 3, name: 'Alex', genre: 'Masculin', typeContrat: 'cdi' },
+]
+
 
 function App() {
+
+  const [employe, setEmploye] = useState(empl)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Bonjours à tous</h1>
+        <Testcompo list={employe} />
+
       </header>
     </div>
   );
