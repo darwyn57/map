@@ -5,7 +5,7 @@ const Testcompo = ({ list }) => {
         <div className='testcompo' key={emp.id}>
             <div>Nom:{emp.name}</div>
             <div>Genre:{emp.genre}</div>
-            <div>Type de contrat:{emp.typeContat}</div>
+            <div>Type de contrat:{emp.typeContrat}</div>
 
         </div>)
     return (
